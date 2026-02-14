@@ -21,7 +21,7 @@ with sync_playwright() as p:
         if re.search(rf"\b{re.escape(args.palavra)}\b", texto, re.IGNORECASE): 
             print(f"PALAVRA INFORMADA <<{args.palavra}>> ENCONTRADO(A) EM -> ", page.url)
 
-        next_btn = page.locator(rf"text=\bnext\b")
+        next_btn = page.locator(f"text=next")
         if next_btn.count() == 0:
             break
 
