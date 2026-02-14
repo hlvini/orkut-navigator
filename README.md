@@ -1,5 +1,5 @@
 # Orkut Navigator
-Script that automatically navigates the Orkut Archives on Wayback Machine in search of a specified word
+This script allows users to search for terms inside the Orkut archives on the Wayback Machine, since the death of the social network huge amounts of content have been lost and hard to find, that this script may help some find what they're looking for. Support The Internet Archive.
 
 ## Setup
 1. Clone the repository
@@ -14,3 +14,6 @@ The archive is divided alphabetically, from numbers and special characters (repr
 
 `--word`  
 Searches for the specified whole word through the archives, not case-sensitive
+
+## LIMITATIONS  
+Beware that this script may cause temporary request blocking by the Internet Archive, also, this script can be extremely slow at times due to Wayback Machine general slowness
