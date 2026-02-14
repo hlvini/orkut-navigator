@@ -4,8 +4,8 @@ from playwright.sync_api import sync_playwright
 
 # definicao dos argumentos necessarios para funcionamento do codigo
 parser = argparse.ArgumentParser()
-parser.add_argument("--letra", required=True)
-parser.add_argument("--palavra", required=True)
+parser.add_argument("--index", required=True)
+parser.add_argument("--word", required=True)
 args = parser.parse_args()
 
 url_inicial = f"https://web.archive.org/web/2/http://orkut.google.com/l-{args.letra}.html" # url do acervo 
@@ -18,8 +18,8 @@ with sync_playwright() as p:
 
     while True:
         texto = page.inner_text("body")
-        if re.search(rf"\b{re.escape(args.palavra)}\b", texto, re.IGNORECASE): 
-            print(f"PALAVRA INFORMADA <<{args.palavra}>> ENCONTRADO(A) EM -> ", page.url)
+        if re.search(rf"\b{re.escape(args.palavra)}\b", texto, re.IGNORECASE): # garante que a palavra seja encontrada de forma inteira e não aglutinada, ignora case
+            print(f"WORD FOUND <<{args.palavra}>> IN -> ", page.url)
 
         next_btn = page.locator(f"text=next")
         if next_btn.count() == 0:
