@@ -9,8 +9,8 @@ Script that automatically navigates the Orkut Archives on Wayback Machine in sea
 ## Usage
 Invoke the script by calling `python3 main.py` then specifing the `--index` and `--word` arguments, must be done inside the virtual environment (e.g.: `python3 main.py --index l --word carro`)
 
-*--index*  
+`*--index*`  
 The archive is divided alphabetically, from numbers and special characters (represented by 0), from A to Z. 
 
-*--word*  
+`*--word*`  
 Searches for the specified whole word through the archives, not case-sensitive
