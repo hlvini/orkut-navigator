@@ -4,9 +4,9 @@ This script allows users to search for terms inside the Orkut archives on the Wa
 ## Setup
 1. Clone the repository  
 `git clone https://github.com/hlvini/orkut-navigator.git`
-2. Inside, create a virtual environment  
+2. Inside, create a Python virtual environment (through conda or venv)  
 `python3 -m venv venv`  
-4. activate it  
+4. Activate it  
 `source venv/bin/activate`  
 3. Install requirements.txt  
 `pip install -r requirements.txt`
